@@ -7,6 +7,7 @@ app.get('/tip:num1/:num2', (req, res) => {
   const ans = parseInt(req.params.num1) % parseInt(req.params.num2)
   res.status(200).json({ msg: `is ${ans}` })
 })
+
 app.get('/magic/:question', (req, res) => {
   const ans = questions(req.params.question)
   res.status(200).json({
@@ -30,7 +31,8 @@ app.get('/magic/:question', (req, res) => {
       "My sources say no",
       "Outlook not so good", 
       "Very doubtful"]
-})
+    })
+
 
 
   // Tell the app to listen on a port
@@ -38,6 +40,11 @@ app.get('/magic/:question', (req, res) => {
 app.listen (3030, () => {
     console.log('Listening on Port 3030')
 })
+
+
+
+
+
 
 
 
